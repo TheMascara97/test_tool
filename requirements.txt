@@ -1,0 +1,23 @@
+# 设备测试工具箱 — 运行与打包依赖
+# 安装： pip install -r requirements.txt
+# 已验证环境： Python 3.13.11 (Windows x64)
+
+# GUI 框架（必须）
+PyQt5==5.15.11
+
+# 串口通信：开关机测试、FOTA、继电器串口模式（必须）
+pyserial==3.5
+
+# MSH 认证的 ECDSA 签名（必须，NASH_FOTA.py 在启动时会检查）
+cryptography==46.0.3
+
+# FOTA 命令触发降级的 SSH 通道
+paramiko==5.0.0
+
+# 打包为单文件 exe（仅开发/发布机需要）
+pyinstaller==6.22.0
+
+# ── 可选依赖 ──
+# 开关机测试的 HID 继电器模式需要；未安装时该模式不可用，
+# 程序会给出安装提示，串口继电器模式不受影响。
+# hid==1.0.6

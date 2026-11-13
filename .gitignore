@@ -1,0 +1,30 @@
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# ── PyInstaller 产物 ──
+build/
+dist/
+*.spec.bak
+*.manifest
+
+# 如果需要把 exe 纳入版本管理，去掉上面 dist/ 并放开下面一行
+# !dist/ToolBox.exe
+
+# ── 运行时生成（不入库）──
+logs/
+gui_config.json
+gui_config.json.bak_*
+gui_config.json.tmp
+
+# 用户从界面「导出配置」得到的文件
+reboot_config.json
+fota_config.json
+
+# ── 测试 / 调试临时文件 ──
+*.log
+tmp_*.py
